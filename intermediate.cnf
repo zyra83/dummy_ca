@@ -65,21 +65,22 @@ x509_extensions     = v3_ca
 
 [ req_distinguished_name ]
 # See <https://en.wikipedia.org/wiki/Certificate_signing_request>.
-countryName                     = Country Name (2 letter code)
-stateOrProvinceName             = State or Province Name
-localityName                    = Locality Name
-0.organizationName              = Organization Name
-organizationalUnitName          = Organizational Unit Name
-commonName                      = Common Name
-emailAddress                    = Email Address
+countryName                     = "Pays (C=) Le code à deux lettres ISO pour le pays où est situé l\'organisme. Par exemple FR, CA"
+stateOrProvinceName             = "Province, Région ou État (S=) Par exemple Normandie, Ile-de-France"
+localityName                    = "Localité (L=) Par exemple Paris, Londres"
+0.organizationName              = "Nom de l\'entreprise / Organisation (O=) Nom d\'une société ou d\'une association légalement constituée."
+organizationalUnitName          = "Nom du département / Unité Organisationnelle : Par exemple RH, finance, informatique"
+commonName                      = "Le nom complet (FQDN) du domaine Internet à sécuriser par exemple « www.wikipedia.org »"
+emailAddress                    = "Une adresse e-mail pour contacter l\'organisation. Habituellement l\'adresse email de l\'administrateur de certificats"
 
 # Optionally, specify some defaults.
-countryName_default             = GB
-stateOrProvinceName_default     = United Kingdom
-localityName_default            = London
-0.organizationName_default      = ACME Inc.
-organizationalUnitName_default  = Anvil Department
-emailAddress_default            = ''
+countryName_default             = FR
+stateOrProvinceName_default     = Landes
+localityName_default            = Geloux
+0.organizationName_default      = Flash Corp.
+organizationalUnitName_default  = Informatique
+commonName_default              = Flash Corp. intermediate CA
+emailAddress_default            = contact@info.flashcorp.fr
 
 [ v3_ca ]
 # Extensions for a typical CA (`man x509v3_config`).
